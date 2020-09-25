@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{A33F9656-5169-419B-B532-EC523FAD9858}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="React3/ClientApp/src/components/Style.css">
+    <Files>
+      <File FileName="React3/ClientApp/src/components/Login.js" Line="170" Column="39" />
+      <File FileName="React3/ClientApp/src/App.js" Line="7" Column="8" />
+      <File FileName="React3/ClientApp/src/api/API.js" Line="19" Column="40" />
+      <File FileName="React3/ClientApp/src/api/Helper.js" Line="103" Column="1" />
+      <File FileName="React3/ClientApp/src/components/Layout.js" Line="1" Column="1" />
+      <File FileName="React3/ClientApp/src/components/SignUp.js" Line="23" Column="19" />
+      <File FileName="React3/ClientApp/src/components/Style.css" Line="101" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="React3" expanded="True">
+            <Node name="React3" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="api" expanded="True" />
+                  <Node name="components" expanded="True">
+                    <Node name="Style.css" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.React3 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
