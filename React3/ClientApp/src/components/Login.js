@@ -88,7 +88,7 @@ function LoginButton(){
         let ret = await postLogin(user)
         if (ret.ok) {
             console.log("OK here")
-            history.push('/basicTable')
+            history.push('/table')
         }
     }
 
