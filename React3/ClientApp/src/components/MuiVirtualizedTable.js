@@ -37,6 +37,8 @@ export const styles = theme => ({
 });
 
 class MuiVirtualizedTable extends React.PureComponent {
+
+
     static defaultProps = {
         headerHeight: 48,
         rowHeight: 48,
@@ -228,6 +230,10 @@ for (let i = 0; i < 200; i += 1) {
     const randomSelection = sample[Math.floor(Math.random() * sample.length)];
     rows.push(createData(i, ...randomSelection));
 }
+const columns = [{ field: 'id', headerName: 'ID', width: 70 },
+{ filed: 'name', headerName: 'Property Name', width: 130 },
+    { filed: 'isEnabled', headerName: 'Enabled', width: 70 },
+    { filed: 'unitNo', headerName: 'Unit Number', width: 70 },];
 
 export default function ReactVirtualizedTable() {
     return (

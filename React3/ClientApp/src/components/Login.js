@@ -19,7 +19,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import LockIcon from '@material-ui/icons/Lock';
 import SignUp from './SignUp';
-import { postLogin } from '../api/API'
+import { postLogin,getProperties } from '../api/API'
 import {useHistory} from "react-router-dom";
 import './Style.css';
 
@@ -79,17 +79,28 @@ function LoginButton(){
     const history = useHistory();
     const classes = myStyles();
     async function onClick() {
-    
-        console.log("hi im here")
+        
         let user = {
             "Email": "michael@keyninja.io",
             "Password":"710X!n713"
         }
+        
         let ret = await postLogin(user)
         if (ret.ok) {
             console.log("OK here")
             history.push('/table')
         }
+        /*
+          let getPropertyModel = {
+            "userId": "cf60afed-dc27-41ff-867d-99254146a636",
+            "showDeactivated": false,
+        }
+        let ret = await getProperties(getPropertyModel)
+        if (ret.ok) {
+            console.log(ret.data)
+        }
+        */
+       
     }
 
     return(

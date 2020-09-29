@@ -7,6 +7,7 @@ import { Counter } from './components/Counter';
 import SignIn from './components/Login'
 import SignUp from './components/SignUp'
 import ReactVirtualizedTable from './components/MuiVirtualizedTable'
+import PropertyList from './components/PropertyList'
 import './custom.css'
 
 export default class App extends Component {
@@ -19,7 +20,7 @@ export default class App extends Component {
             <Route path='/counter' component={Counter} />
             <Route path='/signup' component={SignUp} />
             <Route path='/fetch-data' component={FetchData} />
-            <Route path='/table' component={ReactVirtualizedTable} />
+            <Route path='/table' component={PropertyList} />
       </Layout>
     );
   }

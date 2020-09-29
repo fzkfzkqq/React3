@@ -1,6 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
-namespace React2.Model
+namespace React3.Model
 {
     public class LoginModel
     {

@@ -1,5 +1,5 @@
-﻿import { postData, updateData } from "./Helper";
-
+﻿import { postData, updateData, getData } from "./Helper";
+const url = 'https://keyninja-internal.azurewebsites.net/api/Dashboard/ListProperties'
 export const postInstantJob = job =>
     postData(`/api/Data/Job`, job);
 
@@ -17,3 +17,6 @@ export const postEnquiry = job =>
 
 export const postLogin = login =>
     postData('/api/Data/Login', login);
+
+export const getProperties = getPropertyModel=>
+    getData('/api/Data/getProperties', getPropertyModel);

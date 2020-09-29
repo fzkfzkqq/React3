@@ -1,17 +1,9 @@
 ﻿<Properties StartupConfiguration="{A33F9656-5169-419B-B532-EC523FAD9858}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="React3/ClientApp/src/components/MuiVirtualizedTable.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="React3/ClientApp/src/components/PropertyList.js">
     <Files>
-      <File FileName="React3/ClientApp/src/components/Login.js" Line="19" Column="30" />
-      <File FileName="React3/ClientApp/src/App.js" />
-      <File FileName="React3/ClientApp/src/api/API.js" />
-      <File FileName="React3/ClientApp/src/api/Helper.js" />
-      <File FileName="React3/ClientApp/src/components/Layout.js" Line="1" Column="1" />
-      <File FileName="React3/ClientApp/src/components/SignUp.js" />
-      <File FileName="React3/ClientApp/src/components/Style.css" />
-      <File FileName="React3/Controllers/DataController.cs" Line="44" Column="1" />
-      <File FileName="React3/Controllers/WeatherForecastController.cs" />
-      <File FileName="React3/Model/AuthModel.cs" />
-      <File FileName="React3/ClientApp/src/components/MuiVirtualizedTable.js" Line="278" Column="2" />
+      <File FileName="React3/Controllers/DataController.cs" Line="54" Column="49" />
+      <File FileName="React3/Model/GetPropertyModel.cs" />
+      <File FileName="React3/ClientApp/src/components/PropertyList.js" Line="33" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,18 +13,23 @@
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
                   <Node name="components" expanded="True">
-                    <Node name="MuiVirtualizedTable.js" selected="True" />
+                    <Node name="PropertyList.js" selected="True" />
                   </Node>
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="Helpers" expanded="True" />
               <Node name="Model" expanded="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
+        <State>
+          <Value>data</Value>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

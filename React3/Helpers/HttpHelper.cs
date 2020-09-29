@@ -9,7 +9,7 @@ using System.Net;
 using System.Net.Cache;
 using System.Web;
 
-namespace React2.Helpers
+namespace React3.Helpers
 {
     public class HttpHelper
     {
