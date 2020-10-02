@@ -2,6 +2,7 @@
 import { PropTypes } from "prop-types";
 import clsx from 'clsx';
 import classNames from "classnames";
+import { getProperties } from '../api/API';
 import withStyles from "@material-ui/core/styles/withStyles";
 import TableCell from "@material-ui/core/TableCell";
 import Paper from '@material-ui/core/Paper';
@@ -25,7 +26,7 @@ export const styles = theme => ({
     },
     tableRowHover: {
         "&:hover": {
-            backgroundColor: theme.palette.grey[200]
+            //backgroundColor: theme.palette.grey[200]
         }
     },
     tableCell: {
@@ -38,11 +39,14 @@ export const styles = theme => ({
 
 class MuiVirtualizedTable extends React.PureComponent {
 
-
     static defaultProps = {
         headerHeight: 48,
         rowHeight: 48,
     };
+    constructor(props) {
+        super(props)
+        this.classes = styles()
+    }
     /**
      * Return the row class names
      * tableRowHover is applied to non-header rows when onRowClick has been specified
@@ -209,17 +213,9 @@ MuiVirtualizedTable.defaultProps = {
     sort: undefined
 };
 
-
-const sample = [
-    ['Frozen yoghurt', 159, 6.0, 24, 4.0],
-    ['Ice cream sandwich', 237, 9.0, 37, 4.3],
-    ['Eclair', 262, 16.0, 24, 6.0],
-    ['Cupcake', 305, 3.7, 67, 4.3],
-    ['Gingerbread', 356, 16.0, 49, 3.9],
-];
-
 const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 
+/*
 function createData(id, dessert, calories, fat, carbs, protein) {
     return { id, dessert, calories, fat, carbs, protein };
 }
@@ -230,54 +226,33 @@ for (let i = 0; i < 200; i += 1) {
     const randomSelection = sample[Math.floor(Math.random() * sample.length)];
     rows.push(createData(i, ...randomSelection));
 }
-const columns = [{ field: 'id', headerName: 'ID', width: 70 },
-{ filed: 'name', headerName: 'Property Name', width: 130 },
-    { filed: 'isEnabled', headerName: 'Enabled', width: 70 },
-    { filed: 'unitNo', headerName: 'Unit Number', width: 70 },];
+*/
+const columns = [{ dataKey: 'id', label: 'ID', width: 70, sortDirection: 'asc',},
+    { dataKey: 'name', label: 'Property Name', width: 300, sortDirection: 'asc' },
+    { dataKey: 'address.locality', label: 'Address', width: 70, sortDirection: 'asc'},
+    { dataKey: 'unitNo', label: 'Unit Number', width: 70, sortDirection: 'asc'},];
 
 export default function ReactVirtualizedTable() {
+    const [items, setData] = React.useState([]);
+    const getPropertyModel = {
+        "userId": "cf60afed-dc27-41ff-867d-99254146a636",
+        "showDeactivated": false
+    }
+    React.useEffect(() => {
+        async function fetchData() {
+            const ret = await getProperties(getPropertyModel);
+            console.log(JSON.stringify(ret.data))
+            const obj = JSON.parse(ret.data)
+            await setData(obj);
+        }
+        fetchData()
+    }, []);
     return (
         <Paper style={{ height: 400, width: '100%' }}>
             <VirtualizedTable
-                rowCount={rows.length}
-                rowGetter={({ index }) => rows[index]}
-                columns={[
-                    {
-                        width: 200,
-                        label: 'Dessert',
-                        dataKey: 'dessert',
-                        disableSort: false,
-                        sortDirection: 'asc',
-                    },
-                    {
-                        width: 120,
-                        label: 'Calories\u00A0(g)',
-                        dataKey: 'calories',
-                        numeric: true,
-                        sortDirection: 'asc',
-                    },
-                    {
-                        width: 120,
-                        label: 'Fat\u00A0(g)',
-                        dataKey: 'fat',
-                        numeric: true,
-                        sort: 'asc',
-                    },
-                    {
-                        width: 120,
-                        label: 'Carbs\u00A0(g)',
-                        dataKey: 'carbs',
-                        numeric: true,
-                        sort: 'asc',
-                    },
-                    {
-                        width: 120,
-                        label: 'Protein\u00A0(g)',
-                        dataKey: 'protein',
-                        numeric: true,
-                        sort: 'asc',
-                    },
-                ]}
+                rowCount={items.length}
+                rowGetter={({ index }) => items[index]}
+                columns={columns}
             />
         </Paper>
     );
