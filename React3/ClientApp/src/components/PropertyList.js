@@ -86,7 +86,11 @@ function PropertyList() {
                 
         </Paper>
         */
-        <BasicTable />
+        <Paper style={{ height: 750, width:'100%'
+        }}>
+            <BasicTable
+                items={items} />
+        </Paper>
     );
 
 }

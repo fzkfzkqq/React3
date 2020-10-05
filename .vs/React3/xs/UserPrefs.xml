@@ -1,17 +1,22 @@
 ﻿<Properties StartupConfiguration="{A33F9656-5169-419B-B532-EC523FAD9858}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="React3/ClientApp/src/components/AddressToString.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="React3/ClientApp/src/components/ActionsMenu.js">
     <Files>
       <File FileName="React3/Controllers/DataController.cs" Line="54" Column="49" />
       <File FileName="React3/Model/GetPropertyModel.cs" />
-      <File FileName="React3/ClientApp/src/components/PropertyList.js" Line="90" Column="7" />
-      <File FileName="React3/ClientApp/src/components/MuiVirtualizedTable.js" Line="5" Column="1" />
+      <File FileName="React3/ClientApp/src/components/PropertyList.js" Line="89" Column="36" />
+      <File FileName="React3/ClientApp/src/components/MuiVirtualizedTable.js" Line="145" Column="8" />
       <File FileName="React3/ClientApp/src/components/VirtualizedTable.js" Line="45" Column="23" />
-      <File FileName="React3/ClientApp/src/components/SignUp.js" />
+      <File FileName="React3/ClientApp/src/components/SignUp.js" Line="1" Column="1" />
       <File FileName="React3/ClientApp/src/components/Login.js" />
       <File FileName="React3/ClientApp/src/components/Style.css" Line="1" Column="1" />
       <File FileName="React3/ClientApp/src/App.js" />
-      <File FileName="React3/ClientApp/src/components/BasicTable.js" Line="58" Column="36" />
+      <File FileName="React3/ClientApp/src/components/BasicTable.js" Line="16" Column="54" />
       <File FileName="React3/ClientApp/src/components/AddressToString.js" Line="12" Column="2" />
+      <File FileName="React3/ClientApp/src/components/NavMenu.js" Line="1" Column="1" />
+      <File FileName="React3/ClientApp/src/components/NavMenu.css" Line="1" Column="1" />
+      <File FileName="React3/ClientApp/src/components/TableCollapse.css" Line="4" Column="40" />
+      <File FileName="React3/ClientApp/src/components/Row.js" Line="31" Column="40" />
+      <File FileName="React3/ClientApp/src/components/ActionsMenu.js" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +26,7 @@
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
                   <Node name="components" expanded="True">
-                    <Node name="AddressToString.js" selected="True" />
+                    <Node name="ActionsMenu.js" selected="True" />
                   </Node>
                 </Node>
               </Node>
